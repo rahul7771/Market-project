@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+
+  <title>Get Symbol</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='sidebar.css')}}"> -->
+  <link rel="stylesheet" href="css/sidebar.css">
+
+
+</head>
+
+<body>
+
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <!-- Sidebar -->
+  <div class="sidebar-header">
+
+
+    <!-- <h3>bazaaR</h3> -->
+    <img class="main-img"  src="images/icon.png"
+    alt="LOGO" />
+  </div>
+
+
+  <nav id="sidebar">
+    <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  <li class="{{category}}">{{ message }}</li>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+ -->
+
+    <!-- <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                  <i class="fas fa-align-left"></i>
+                  <span>Toggle Sidebar</span>
+                </button>
+
+              </div>
+            </nav>
+          </div> -->
+
+        <ul class="list-unstyled components">
+      <!-- <p style="font-family:font-family: " Montserrat"; "><em><b>Welcome !</b></em></p> -->
+      <br>
+      <br>
+      <li class="">
+        <a href="/profile">My profile</a>
+        <ul class="collapse list-unstyled" >
+
+        </ul>
+      </li>
+
+      <br>
+
+
+      <li>
+        <a href="/portfolio">Portfolio</a>
+      </li>
+
+      <br>
+
+
+      <li>
+        <a href="/research">Research</a>
+        <ul class="collapse list-unstyled" >
+        </ul>
+      </li>
+
+      <br>
+
+
+      <li>
+        <a href="/trade">Trade </a>
+      </li>
+
+      <br>
+
+
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+
+      <br>
+
+      <li>
+        <a href="/logout">Log Out</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="mycontainer">
+    <div class="profile">
+      <!-- div class="row"> -->
+        <!-- <div class="col"> -->
+        <% companyData.forEach(function(it){ %>
+
+          <p> <strong> Name            : <%=it.name%>  </strong></p>
+          <p> Symbol          : <%=it.symbol%> </p>
+          <p> Currency        : <%=it.currency%> </p>
+          <p> Stock Exchange  : <%=it.stockExchange%> </p>
+          <hr>
+
+       <%  }); %>
+
+
+        <!-- </div> -->
+     <!--  </div> -->
+   </div>
+  </div>
+  <!-- Footer -->
+
+
+
+</body></html>

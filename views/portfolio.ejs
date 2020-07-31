@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+
+  <title>PORTFOLIO PAGE</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='portfolio.css')}}"> -->
+  <link rel="stylesheet" href="css/portfolio.css">
+
+</head>
+
+<body>
+
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <!-- Sidebar -->
+  <div class="sidebar-header">
+    <!-- <h3>bazaaR</h3> -->
+    <img class="main-img"  src="images/icon.png">
+  </div>
+
+
+  <nav id="sidebar">
+
+     <!-- <div id="content">
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                  <i class="fas fa-align-left"></i>
+                  <span>Toggle Sidebar</span>
+                </button>
+
+              </div>
+            </nav>
+          </div> -->
+    <ul class="list-unstyled components">
+      <p style="font-family:font-family: " Montserrat"; "><em><b>Welcome !</b></em></p>
+      <br>
+      <br>
+      <li class="">
+        <a href="/profile">My profile</a>
+
+      </li>
+
+      <br>
+
+
+      <li>
+        <a href="/portfolio">Portfolio</a>
+      </li>
+
+      <br>
+
+
+      <li>
+        <a href="/research">Research</a>
+        <ul class="collapse list-unstyled" >
+        </ul>
+      </li>
+
+      <br>
+
+
+      <li>
+        <a href="/trade">Trade </a>
+      </li>
+
+      <br>
+
+
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+
+      <br>
+
+      <li>
+        <!-- {% if current_user.is_authenticated %} -->
+        <a href="/logout">Log Out</a>
+        <!-- {% endif %} -->
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="mycontainer">
+    <div class="profile">
+      <div class="">
+        <div class="">
+          <br>
+          <div class="Investor" >
+            <p><strong style="font-weight: bold;">Name :&nbsp  &nbsp &nbsp &nbsp &nbsp  <%= name %> </span></strong></p>
+            <br>
+            <p><strong style="font-weight: bold;">Email :&nbsp  &nbsp &nbsp &nbsp &nbsp  <%=username %> </span></strong></p>
+            <br>
+            <p><strong style="font-weight: bold;">Account Value : &nbsp  &nbsp &nbsp &nbsp $ <%=acc_value %> </strong></p>
+            </br>
+            <p><strong style="font-weight: bold;">Buying Power :&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp $ <%=buy_power %> </strong></p>
+            <br>
+         </div>
+        <!--<table>
+            <tbody>
+              <tr>
+
+                <td class="" id="intro-box">
+                  <div class="label">
+
+                     <strong>Investor Profile</strong>
+                  </div>
+                   <div id="intro-box-info" class="value" style="padding-top:3px;">
+
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <br>
+                </td>
+              </tr>
+
+
+
+            </tbody>
+          </table>
+          -->
+
+         <!-- <table>
+            <tbody>
+              <tr>
+                <td class="label">Account Value</td>
+                <td class="value"><span class="">$100,000.00</span></td>
+              </tr>
+
+            </tbody>
+          </table>-->
+        </div>
+      </div>
+
+
+
+</div>
+
+
+
+<br>
+
+<br>
+
+    <div class="activity">
+      <h2 class="userprofile"><em>User Portfolio: </em></h2>
+      <br>
+
+      <table class="table1" >
+        <tbody>
+
+
+
+          <tr>
+            <td class="txt" > <strong>Symbol</strong> </td>
+            <td class="txt"> <strong>Name</strong></td>
+            <!-- <td class="txt" > <strong>Type</strong></td> -->
+            <td class="txt" > <strong>Quantity </strong></td>
+            <td class="txt">  <strong>Pur. Price</strong> </td>
+            <td class="txt"> <strong>Curr Price </strong></td>
+            <td class="txt"> <strong>Total Value</strong></td>
+            <td class="txt"> <strong>Today's Change</strong></td>
+            <td class="txt"> <strong>Perc.Change</strong></td>
+            <!-- <td class="txt"> <strong>Pur. Date</strong></td> -->
+          </tr>
+
+        <%  boughtData.forEach(function(it){ %>
+            <tr>
+                <td> <%= it.Symbol   %>   </td>
+                <td> <%= it.Name   %>   </td>
+                <td> <%= it.Quantity   %>   </td>
+                <td> <%= it.Pur_Price   %>   </td>
+                <td> <%= it.Curr_Price   %>   </td>
+                <td> <%= it.Total_Value   %>   </td>
+                <td> <%= it.Todays_Change   %>   </td>
+                <td> <%= it.Perc_Change   %>   </td>
+
+
+            </tr>
+      <%    }); %>
+
+
+        </tbody>
+      </table>
+
+
+      <br><br><br>
+
+
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+
+
+
+
+  <section id="footer">
+    <div class="footer-note">
+      <i class="footer-icon fab fa-twitter fa-2x"></i>
+      <i class="footer-icon fab fa-facebook-f fa-2x"></i>
+      <i class="footer-icon fab fa-instagram fa-2x"></i>
+      <!-- <i class="footer-icon fas fa-envelope fa-2x"></i> -->
+      <p style="color:#fff">© Copyright 2019 BAAZAAR</p>
+    </div>
+</section>
+
+</body>
+
+</html>
